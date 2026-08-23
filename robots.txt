@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mechetdelivery.github.io/Mechet_delivery/sitemap.xml
