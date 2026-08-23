@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="መቼት Delivery — fast and reliable local delivery in Dukem, Ethiopia. You order, we deliver.">
+  <title>መቼት Delivery | You Order, We Deliver</title>
+  <style>
+    :root{
+      --blue:#1268e8;
+      --black:#111111;
+      --white:#ffffff;
+      --light:#f5f8fc;
+      --muted:#64748b;
+      --border:#e5e7eb;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--black);background:var(--white);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .brand img{width:48px;height:48px;object-fit:contain;border-radius:50%}
+    .brand span{font-size:18px}
+    .navlinks{display:flex;gap:26px;font-weight:700;font-size:14px}
+    .navlinks a:hover{color:var(--blue)}
+    .menu{display:none;border:0;background:none;font-size:28px}
+    .hero{padding:78px 0 64px;background:linear-gradient(135deg,#fff 55%,#edf5ff)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;background:#eaf2ff;color:var(--blue);padding:8px 14px;border-radius:999px;font-weight:800;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-2px;margin-bottom:20px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:19px;color:var(--muted);max-width:620px;margin-bottom:28px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:800}
+    .primary{background:var(--blue);color:#fff}
+    .secondary{border:2px solid var(--black)}
+    .hero-logo{display:flex;justify-content:center}
+    .hero-logo img{width:min(390px,80vw);filter:drop-shadow(0 20px 30px rgba(0,0,0,.12))}
+    section{padding:76px 0}
+    .section-title{text-align:center;font-size:36px;margin-bottom:12px}
+    .section-sub{text-align:center;color:var(--muted);max-width:650px;margin:0 auto 38px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{padding:28px;border:1px solid var(--border);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.05)}
+    .icon{font-size:34px;margin-bottom:14px}
+    .card h3{margin-bottom:8px;font-size:20px}
+    .card p{color:var(--muted)}
+    .how{background:var(--light)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{background:#fff;border-radius:20px;padding:28px;text-align:center}
+    .number{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;margin:0 auto 15px;font-weight:900}
+    .order{background:var(--black);color:#fff}
+    .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .order h2{font-size:42px;line-height:1.1;margin-bottom:14px}
+    .order p{color:#cbd5e1}
+    form{background:#fff;color:var(--black);padding:28px;border-radius:20px}
+    label{display:block;font-weight:800;font-size:14px;margin:12px 0 6px}
+    input,textarea{width:100%;padding:13px;border:1px solid #d1d5db;border-radius:10px;font:inherit}
+    textarea{min-height:100px;resize:vertical}
+    .location-row{display:grid;grid-template-columns:1fr auto;gap:8px}.loc-btn{border:1px solid #cbd5e1;background:#f8fafc;color:#111;padding:10px 12px;border-radius:10px;font-weight:800;cursor:pointer;white-space:nowrap}.location-help{font-size:12px;color:#64748b;margin-top:5px}.location-status{font-size:12px;color:#1268e8;margin-top:5px;min-height:18px}.submit{width:100%;border:0;cursor:pointer;margin-top:16px;font-size:16px}
+    .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact a{display:block;padding:22px;border:1px solid var(--border);border-radius:16px;text-align:center;font-weight:800}
+    footer{background:#0b0b0b;color:#fff;padding:30px 0;text-align:center}
+    footer p{color:#94a3b8;font-size:14px;margin-top:5px}
+    .lang{font-weight:800;color:var(--blue)}
+    @media(max-width:800px){
+      .navlinks{display:none}
+      .menu{display:block}
+      .hero-grid,.order-grid{grid-template-columns:1fr}
+      .hero{text-align:center}
+      .hero p{margin-left:auto;margin-right:auto}
+      .buttons{justify-content:center}
+      .cards,.steps,.contact{grid-template-columns:1fr}
+      .hero-logo{order:-1}
+      .hero-logo img{width:260px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home">
+        <img src="logo.png" alt="መቼት Delivery logo">
+        <span>መቼት Delivery</span>
+      </a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#order">Order</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu" aria-label="Menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">🚚 Local delivery in Dukem</div>
+      <h1>You order.<br><span>We deliver.</span></h1>
+      <p>Fast, reliable and convenient local delivery from መቼት Delivery. Tell us where to pick up and where to deliver — we'll take care of the rest.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#order">Place an Order</a>
+        <a class="btn secondary" href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-logo"><img src="logo.png" alt="Mechet Delivery"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Simple local delivery designed to make everyday orders easier.</p>
+    <div class="cards">
+      <div class="card"><div class="icon">📦</div><h3>Package Delivery</h3><p>Send packages and everyday items from one location to another.</p></div>
+      <div class="card"><div class="icon">🛵</div><h3>Local Pickup</h3><p>We pick up your order from a shop, restaurant, business or other location.</p></div>
+      <div class="card"><div class="icon">📍</div><h3>Door-to-Door</h3><p>We collect your item and deliver it to the destination you provide.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Ordering is simple — just give us the details and we'll handle the delivery.</p>
+    <div class="steps">
+      <div class="step"><div class="number">1</div><h3>Send Your Order</h3><p>Tell us your name, phone number, pickup location, delivery location and item.</p></div>
+      <div class="step"><div class="number">2</div><h3>Confirm the Price</h3><p>We'll check the route and confirm the delivery price with you.</p></div>
+      <div class="step"><div class="number">3</div><h3>We Deliver</h3><p>Our delivery service picks up your item and takes it to the destination.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="container order-grid">
+    <div>
+      <h2>Ready to send an order?</h2>
+      <p>Fill in the form and prepare your delivery details. For now, the form opens WhatsApp/SMS with the information so you can confirm the order directly.</p>
+      <p style="margin-top:18px" class="lang">እርስዎ ያዝዙ፣ እኛ እናደርሳለን።</p>
+    </div>
+    <form id="orderForm">
+      <label for="name">Your name / ስም</label>
+      <input id="name" required>
+      <label for="phone">Phone / ስልክ</label>
+      <input id="phone" type="tel" required>
+      <label for="pickup">Pickup location / የሚወሰድበት ቦታ</label>
+      <div class="location-row"><input id="pickup" placeholder="Paste a Google Maps link or type the address" required><button class="loc-btn" type="button" onclick="getLocation('pickup','pickupStatus')">📍 My location</button></div>
+      <div class="location-help">Open Google Maps, drop a pin, choose Share, and paste the link here if needed.</div><div id="pickupStatus" class="location-status"></div>
+      <label for="dropoff">Delivery location / የሚደርስበት ቦታ</label>
+      <div class="location-row"><input id="dropoff" placeholder="Paste the receiver's Google Maps link or address" required><button class="loc-btn" type="button" onclick="getLocation('dropoff','dropoffStatus')">📍 My location</button></div>
+      <div class="location-help">If the receiver is elsewhere, ask them to share their Google Maps location and paste the link here.</div><div id="dropoffStatus" class="location-status"></div>
+      <label for="item">Item / የሚላከው</label>
+      <textarea id="item" required></textarea>
+      <button class="btn primary submit" type="submit">Send Order Details</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact መቼት Delivery</h2>
+    <p class="section-sub">Choose the easiest way to reach us.</p>
+    <div class="contact">
+      <a href="tel:+251980683085">📞 Call Us<br><small>09-80-68-30-85</small></a>
+      <a href="https://instagram.com/mechet_delivery" target="_blank">📸 Instagram<br><small>@mechet_delivery</small></a>
+      <a href="https://youtube.com/@mechetdelivery" target="_blank">▶️ YouTube<br><small>መቼት Delivery</small></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>መቼት Delivery</strong>
+  <p>You order, we deliver. • Dukem, Ethiopia</p>
+</footer>
+
+<script>
+function getLocation(fieldId,statusId){const field=document.getElementById(fieldId),status=document.getElementById(statusId);if(!navigator.geolocation){status.textContent='Location is not supported. Please paste a Google Maps link.';return;}status.textContent='Getting your location… Please allow location access.';navigator.geolocation.getCurrentPosition(function(pos){const lat=pos.coords.latitude.toFixed(6),lng=pos.coords.longitude.toFixed(6);field.value=`https://www.google.com/maps?q=${lat},${lng}`;status.textContent='✓ Location added successfully.';},function(){status.textContent='Could not get location. Allow GPS/location access or paste a Google Maps link.'},{enableHighAccuracy:true,timeout:10000,maximumAge:30000});}
+document.getElementById('orderForm').addEventListener('submit',function(e){e.preventDefault();const text=`Hello መቼት Delivery! 🚚\n\nName: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nPickup location: ${document.getElementById('pickup').value}\nDelivery location: ${document.getElementById('dropoff').value}\nItem: ${document.getElementById('item').value}\n\nPlease confirm the delivery price.`;window.location.href='sms:+251980683085?body='+encodeURIComponent(text);});
+</script>
+</body>
+</html>
